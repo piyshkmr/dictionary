@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+nav {
+  height: 6rem;
+  background-color: purple;
+}
+
+#logo {
+  font-size: 3rem;
+  padding: 1rem 5rem;
+  color: #ecf0f1;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 2.2rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+.searchbar {
+  border: 1.5px solid grey;
+  border-radius: 5px;
+  padding: 0rem 1.5rem;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+}
+
+.searchbar input {
+  width: 45rem;
+  padding: 1rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-size: 1.6rem;
+}
+.searchbar i {
+  font-size: 2rem;
+  color: #7f8c8d;
+}
+
+.searchbar button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.results {
+  padding: 3rem 5rem;
+  overflow: hidden;
+}
+
+.results p {
+  font-size: 2rem;
+  margin: 3rem 0px;
+  border-left: 2px solid purple;
+  padding: 1rem;
+}
+
+.headingans {
+  font-size: 2.5rem;
+}
+
+.hint {
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  margin: 1rem;
+  background-color: purple;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  min-width: 8rem;
+  text-align: center;
+}
+
+.suggestiondiv {
+  width: 500px;
+  padding: 0rem 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 50%;
+  }
+  .searchbar input {
+    width: 70vw;
+  }
+
+  .suggestiondiv {
+    width: 300px;
+  }
+}
+
+.mb5 {
+  margin-bottom: 3rem;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: purple;
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.6rem;
+  margin-top: 20px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dictionary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="logo">Dictionary</div>
+    </nav>
+
+    <section id="search">
+        {{!-- <h4 class="heading mb5">My Dictionary</h4> --}}
+        <form action="/" method="post" class="searchbar">
+            <input type="text" placeholder="Search here" name="word">
+            <button><i class="fa fa-search"></i></button>
+        </form>
+    </section>
+
+
+    <section id="result">
+
+        <h2 class="heading center">{{results}}</h2>
+
+        <div class="results">
+
+            {{#if suggestion}}
+            <div class="suggestiondiv">
+                {{#each list}}
+                <a href="/:{{this}}" class="hint">{{this}}</a>
+                {{/each}}
+            </div>
+            {{/if}}
+
+
+            {{#each def}}
+            <h3 class="headingans">{{this.meta.id}}</h3>
+            <p>{{this.shortdef}}</p>
+            {{/each}}
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        Dictionary website | author : Piyush Kumar |
+        created on
+        31-jan-2021
+    </footer>
+</body>
+
+</html>
